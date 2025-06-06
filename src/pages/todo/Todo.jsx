@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import { v4 as uuidv4 } from "uuid"; // UUID uchun
+import { v4 as uuidv4 } from "uuid";
 const countries = ["Uzbekistan", "USA", "UK", "Germany", "Russia"];
 
 export default function Todo() {
@@ -20,7 +20,7 @@ export default function Todo() {
   const [filterType, setFilterType] = useState("name");
   const [searchTerm, setSearchTerm] = useState("");
   const [countryFilter, setCountryFilter] = useState("");
-  const [editId, setEditId] = useState(null); // id orqali aniqlash
+  const [editId, setEditId] = useState(null);
 
   useEffect(() => {
     localStorage.setItem("students", JSON.stringify(students));
@@ -88,7 +88,6 @@ export default function Todo() {
       <h1 className="text-2xl font-bold mb-4 text-center">Student Manager</h1>
       <Toaster position="top-right" reverseOrder={false} />
 
-      {/* Form */}
       <form
         onSubmit={handleSubmit}
         className="grid grid-cols-2 gap-4 bg-white p-4 rounded-lg shadow-[0px_2px_8px_3px_#9c5ada]"
@@ -143,7 +142,6 @@ export default function Todo() {
         </button>
       </form>
 
-      {/* Filters */}
       <div className="mt-6 space-y-4">
         <div className="flex items-center gap-4">
           <input
@@ -185,7 +183,6 @@ export default function Todo() {
         </select>
       </div>
 
-      {/* Table */}
       <div className="w-full overflow-x-auto mt-6">
         <table className="min-w-[700px] border text-center shadow-[0px_2px_8px_3px_#9c5ada] border-violet-700 outline-none bg-white text-violet-900">
           <thead className="bg-gray-200 text-black h-[30px]">
